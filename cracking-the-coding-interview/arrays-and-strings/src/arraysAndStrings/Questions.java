@@ -1,8 +1,8 @@
 package arraysAndStrings;
- 
+
 class Questions {
 
-    public boolean isUnique(String string) {
+    public boolean isUniqueChars(String string) {
         string = string.toUpperCase();
         int stringSize = string.length();
 
@@ -16,7 +16,7 @@ class Questions {
         return true;
     }
 
-    public boolean isUniqueChars(String str) {
+    public boolean isUniqueCharsBook(String str) {
         if (str.length() > 128) return false;
 
         boolean[] char_set = new boolean[128];
@@ -29,6 +29,18 @@ class Questions {
             }
             char_set[val] = true;
         }
+        return true;
+    }
+
+    public boolean isPermutation(String string, String permut) {
+        if (string.length() != permut.length()) return false;
+        int result = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+            result += string.charAt(i) - permut.charAt(i);
+        }
+
+        if(result != 0) return false;
         return true;
     }
 }
