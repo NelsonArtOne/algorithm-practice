@@ -32,15 +32,23 @@ class Questions {
         return true;
     }
 
+    // Para este problema, assumi que Banana == ANBANA é verdadeiro.
     public boolean isPermutation(String string, String permut) {
         if (string.length() != permut.length()) return false;
-        int result = 0;
+        
+        string = string.toUpperCase();
+        permut = permut.toUpperCase(); 
+
+        int[] array = new int[128];
 
         for (int i = 0; i < string.length(); i++) {
-            result += string.charAt(i) - permut.charAt(i);
+            array[string.charAt(i)] += 1; 
         }
 
-        if(result != 0) return false;
+        for (int i = 0; i < permut.length(); i++) {
+            if(array[permut.charAt(i)] == 0) return false;
+            array[permut.charAt(i)] -= 1;
+        }
         return true;
     }
 }
