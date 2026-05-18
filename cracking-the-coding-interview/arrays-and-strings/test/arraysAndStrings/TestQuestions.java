@@ -11,10 +11,12 @@ public class TestQuestions {
         String string = "Bom dia";
 
         boolean myAnswer = q.isUniqueChars(string);
-        boolean bookAnswer = q.isUniqueCharsBook(string); 
+        boolean bookAnswer = q.isUniqueCharsBook(string);
+        boolean bookTwoAnswer = q.isUniqueCharsTwoBook(string); 
     
         assertEquals(true, myAnswer);
         assertEquals(true, bookAnswer);
+        assertEquals(true, bookTwoAnswer);
     }
 
     @Test
@@ -24,7 +26,21 @@ public class TestQuestions {
 
         boolean myAnswer = q.isUniqueChars(string); 
         boolean bookAnswer = q.isUniqueCharsBook(string);
+        boolean bookTwoAnswer = q.isUniqueCharsTwoBook(string); 
 
+        assertEquals(false, myAnswer);
+        assertEquals(false, bookAnswer);
+        assertEquals(false, bookTwoAnswer);
+    }
+
+    @Test
+    public void isUniqueCharsTwoSpaces() {
+        Questions q = new Questions();
+        String string = "Bom  dia";
+
+        boolean myAnswer = q.isUniqueChars(string);
+        boolean bookAnswer = q.isUniqueCharsBook(string);
+    
         assertEquals(false, myAnswer);
         assertEquals(false, bookAnswer);
     }
@@ -32,7 +48,7 @@ public class TestQuestions {
     @Test
     public void isPermutation() {
         String string = "Banana";
-        String permut = "Anbana";
+        String permut = "anBana";
         
         Questions q = new Questions();
         boolean myAnswer = q.isPermutation(string, permut);
@@ -74,7 +90,7 @@ public class TestQuestions {
     }
 
     @Test
-    public void isPermutationSum() {
+    public void isPermutationSameSumCharsValue() {
         String string = "bc";
         String permut = "ad";
         

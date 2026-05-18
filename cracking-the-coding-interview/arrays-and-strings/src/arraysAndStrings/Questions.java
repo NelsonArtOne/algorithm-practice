@@ -2,6 +2,7 @@ package arraysAndStrings;
 
 class Questions {
 
+    //Neste problema, considerei o espaço como caractere válido.
     public boolean isUniqueChars(String string) {
         string = string.toUpperCase();
         int stringSize = string.length();
@@ -32,7 +33,22 @@ class Questions {
         return true;
     }
 
+    public boolean isUniqueCharsTwoBook(String str) {
+        int checker = 0; 
+        
+        for (int i = 0; i < str.length(); i++) {
+            int val = str.charAt(i) - 'a';
+
+            if ((checker & (1 << val)) > 0) {
+                return false;
+            }
+            checker |= (1 << val);
+        }
+        return true;
+    }
+
     // Para este problema, assumi que Banana == ANBANA é verdadeiro.
+    // Removendo toUpperCase(), Banana == ANBANA retorna falso.
     public boolean isPermutation(String string, String permut) {
         if (string.length() != permut.length()) return false;
         
