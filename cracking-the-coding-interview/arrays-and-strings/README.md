@@ -27,7 +27,7 @@ Por isso, neste repositório há:
 1. **Minha solução primeiro**
 2. **A solução do livro em seguida**
 
-A solução do livro é nomeada com o sufixo `Book`, utilizando **LowerCamelCase** para métodos e variáveis.
+A solução do livro é nomeada com o sufixo `Book`, utilizando **lowerCamelCase** para métodos e variáveis.
 
 ### Exemplo
 
