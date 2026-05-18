@@ -1,18 +1,40 @@
-## Getting Started
+# Cracking the Code Interview (CCI)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Olá, esta parte do repositório é focada na resolução dos problemas do livro *Cracking the Coding Interview (CCI)*.
 
-## Folder Structure
+## Convenções e Itens de Destaque
 
-The workspace contains two folders by default, where:
+- **Java** foi utilizado por ser uma linguagem fortemente tipada, algo que considero importante para esse tipo de problema, mas sem a necessidade de lidar diretamente com ponteiros e gerenciamento manual de memória como em C/C++.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- A convenção **lower camel case** é utilizada para métodos, classes e pastas dentro de `src` e `test`, por preferência pessoal.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Para a resolução dos problemas, utilizei **TDD (Test-Driven Development)** para validar as saídas esperadas.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Uso de LLMs e Agentes
 
-## Dependency Management
+Em relação ao uso de agentes, não utilizei ferramentas de IA para gerar os códigos.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Já LLMs como ChatGPT e Gemini, quando utilizados, serviram para:
+- auxiliar na compreensão dos problemas;
+- discutir possíveis abordagens;
+- comparar estratégias e otimizações.
+
+## Estrutura das Soluções
+
+O livro *Cracking the Coding Interview* possui exercícios resolvidos oficialmente.  
+Por isso, neste repositório há:
+
+1. **Minha solução primeiro**
+2. **A solução do livro em seguida**
+
+A solução do livro é nomeada com o sufixo `Book`, utilizando **LowerCamelCase** para métodos e variáveis.
+
+### Exemplo
+
+```java
+isUnique()
+isUniqueBook()
+```
+> **Observação:**  
+> É provável que eu deixe mais de uma solução minha para o problema. Isso pode ocorrer por querer testar outras abordagens, diferentes exigências, otimizações ou curiosidade.  
+> Independentemente do motivo, todas as soluções estarão devidamente documentadas e comentadas.
