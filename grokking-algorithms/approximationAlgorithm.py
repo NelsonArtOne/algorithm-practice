@@ -42,4 +42,3 @@ print(frutas | vegetais)
 print(frutas & vegetais)
 print(frutas - vegetais)
 print(vegetais - frutas)
-
