@@ -7,7 +7,7 @@ def maior_valor_matriz(matriz):
     
     for linha in matriz:
         for valor in linha:
-            if(valor > maior): 
+            if valor > maior: 
                 maior = valor
     
     return maior
@@ -35,7 +35,7 @@ def calcula_maior_substring(matriz, palavra_a, palavra_b):
     return matriz
 
 def calcula_palavra(palavra_a, palavra_b):
-    matriz = criar_matriz(len(palavra_a), len(palavra_b))
+    matriz = criar_matriz(len(palavra_a) + 1, len(palavra_b) +1 )
     matriz = calcula_maior_substring(matriz, palavra_a, palavra_b)
     print_matriz(matriz)
     print(maior_valor_matriz(matriz))

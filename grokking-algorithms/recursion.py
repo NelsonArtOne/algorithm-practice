@@ -137,30 +137,4 @@ def max(array):
 
 print(max(array))
 
-def quicksort(array):
-    if len(array) < 2: 
-        return array
-    
-    else: 
-        pivo = array[0]
 
-        menores = [i for i in array[1:] if i <= pivo]
-        maiores = [i for i in array[1:] if i > pivo]
-        
-    return quicksort(menores) + [pivo] + quicksort(maiores)
-
-print(quicksort(array))
-
-def quicksortTwo(array):
-    if len(array) < 2:
-        return array
-    else:   
-        middle = int(len(array) / 2)
-        
-        menor = [i for i in array[1:] if i <= array[middle]]
-        high = [i for i in array[1:] if i > array[middle]]
-    
-    return quicksort(menor) + [array[middle-1]] + quicksort(high)
-
-print(quicksortTwo(array))
-    
